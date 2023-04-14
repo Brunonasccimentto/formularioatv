@@ -13,7 +13,7 @@
     <form method="POST" enctype="multipart/form-data">
         <div>
             <fieldset> 
-                <legend> Registrar cliente </legend>
+                <legend> Dados pessoais </legend>
                 <label for="nome">Nome completo:</label><br>
                 <input id="nome" type="text" name="nome" placeholder="João silva Coutto"><br>
     
@@ -28,7 +28,7 @@
                 <label for="telefone">Telefone:</label><br>
                 <input id="telefone" type="text" name="telefone" placeholder="(44)998746971"><br>
     
-    
+            </fieldset>
                 <label for="idtipo_cliente">Escolha o tipo do cliente:</label>
                 <select name="idtipo_cliente" id="idtipo_cliente">
                     <option value="1" id="tipo1"> 1 </option>
@@ -36,6 +36,8 @@
                     <option value="3" id="tipo3"> 3 </option>
                 </select><br>
     
+            <fieldset>
+                    <legend> endereço </legend>
                 <label for="cep">CEP:</label><br>
                 <input id="cep" type="text" name="cep" placeholder="72916023"><br>
     
@@ -58,8 +60,9 @@
                 <label for="uf">Estado:</label><br>
                 <input id="uf" type="text" name="uf"><br>
     
-                <button type="submit">Enviar</button>
             </fieldset>
+                <button type="submit">Enviar</button>
+            
            
         </div>
     </form>
