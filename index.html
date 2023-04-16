@@ -5,66 +5,107 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
     <title>myform</title>
 </head>
 
 <body>
     <h1>Formulário</h1>
     <form method="POST" enctype="multipart/form-data">
-        <div>
-            <fieldset> 
-                <legend> Dados pessoais </legend>
-                <label for="nome">Nome completo:</label><br>
-                <input id="nome" type="text" name="nome" placeholder="João silva Coutto"><br>
-    
-                <label for="id">Id:</label><br>
-                <input id="id" type="text" placeholder="ex:6">
-                <button type="button" id="buscarId">Buscar cliente por ID</button><br>
-    
-                <label for="email">Email:</label><br>
-                <input id="email" type="text" name="email" placeholder="joãosilva@gmail.com">
-                <button type="button" id="buscarEmail">Buscar cliente por Email</button><br>
-    
-                <label for="telefone">Telefone:</label><br>
-                <input id="telefone" type="text" name="telefone" placeholder="(44)998746971"><br>
-    
-            </fieldset>
-                <label for="idtipo_cliente">Escolha o tipo do cliente:</label>
-                <select name="idtipo_cliente" id="idtipo_cliente">
-                    <option value="1" id="tipo1"> 1 </option>
-                    <option value="2" id="tipo2"> 2 </option>
-                    <option value="3" id="tipo3"> 3 </option>
-                </select><br>
-    
-            <fieldset>
-                    <legend> endereço </legend>
-                <label for="cep">CEP:</label><br>
-                <input id="cep" type="text" name="cep" placeholder="72916023"><br>
-    
-    
-                <label for="logradouro">Logradouro:</label><br>
-                <input id="logradouro" type="text" name="logradouro"><br>
-    
-                <label for="numero">Número:</label><br>
-                <input id="numero" type="text" name="numero"><br>
-    
-                <label for="complemento">Complemento:</label><br>
-                <input id="complemento" type="text" name="complemento"><br>
-    
-                <label for="bairro">Bairro:</label><br>
-                <input id="bairro" type="text" name="bairro"><br>
-    
-                <label for="cidade">Localidade:</label><br>
-                <input id="cidade" type="text" name="cidade"><br>
-    
-                <label for="uf">Estado:</label><br>
-                <input id="uf" type="text" name="uf"><br>
-    
-            </fieldset>
-                <button type="submit">Enviar</button>
-            
-           
+
+        <div class="fieldset">
+            <h3> Dados pessoais </h3>
+            <div class="field">
+                <input id="nome" class="input" type="text" name="nome" required>
+                <label for="nome" class="label">Nome completo</label>
+                <span class="bar"></span>
+            </div>
+
+            <div class="field field-button">
+                <div class="input-button">
+                    <input id="id" class="input" type="text" required>
+                    <label for="id" class="label">Id</label>
+                    <span class="bar"></span>
+                </div>
+
+                <div class="button">
+                    <button type="button" id="buscarId">Buscar cliente por ID</button>
+                </div>
+            </div>
+
+            <div class="field field-button">
+                <div class="input-button">
+                    <input id="email" class="input" type="text" name="email" required>
+                    <label for="email" class="label">Email</label>
+                    <span class="bar"></span>
+                </div>
+                <div class="button">
+                    <button type="button" id="buscarEmail">Buscar cliente por Email</button>
+                </div>
+            </div>
+
+            <div class="field">
+                <input id="telefone" class="input" type="text" name="telefone" required>
+                <label for="telefone" class="label">Telefone</label>
+                <span class="bar"></span>
+            </div>
         </div>
+
+        <div id="select" class="field">
+            <label for="idtipo_cliente">Escolha o tipo do cliente:</label>
+            <select name="idtipo_cliente" id="idtipo_cliente">
+                <option value="1" id="tipo1"> 1 </option>
+                <option value="2" id="tipo2"> 2 </option>
+                <option value="3" id="tipo3"> 3 </option>
+            </select>
+        </div>
+
+        <div class="fieldset">
+            <h3> Endereço </h3>
+            <div class="field">
+                <input id="cep" class="input" type="text" name="cep" required>
+                <label for="cep" class="label">CEP</label>
+                <span class="bar"></span>
+            </div>
+
+            <div class="field">
+                <input id="logradouro" class="input" type="text" name="logradouro" required>
+                <label for="logradouro" class="label">Logradouro</label>
+                <span class="bar"></span>
+            </div>
+
+            <div class="field">
+                <input id="numero" class="input" type="text" name="numero" required>
+                <label for="numero" class="label">Número</label>
+                <span class="bar"></span>
+            </div>
+
+            <div class="field">
+                <input id="complemento" class="input" type="text" name="complemento" required>
+                <label for="complemento" class="label">Complemento</label>
+                <span class="bar"></span>
+            </div>
+
+            <div class="field">
+                <input id="bairro" class="input" type="text" name="bairro" required>
+                <label for="bairro" class="label">Bairro</label>
+                <span class="bar"></span>
+            </div>
+
+            <div class="field">
+                <input id="cidade" class="input" type="text" name="cidade" required>
+                <label for="cidade" class="label">Localidade</label>
+                <span class="bar"></span>
+            </div>
+
+            <div class="field">
+                <input id="uf" class="input" type="text" name="uf" required>
+                <label for="uf" class="label">Estado</label>
+                <span class="bar"></span>
+            </div>
+        </div>
+        <button id="submitbutton" type="submit">Cadastar</button>
+
     </form>
 </body>
 
