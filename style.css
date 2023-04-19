@@ -1,7 +1,7 @@
 body{
     margin: 0;
-    background: rgb(20,20,22);
-    background: linear-gradient(90deg, rgba(20,20,22,1) 10%, rgba(9,9,9,1) 100%);
+    background: rgb(21,21,23);
+    background: linear-gradient(169deg, rgba(21,21,23,1) 0%, rgba(9,9,9,1) 100%);
     height: 100vh;
     color: #dedee0;
     display: flex;
@@ -82,7 +82,6 @@ form{
     width: 100%;
 }
 
-
 .logo{
     background-color:  rgba(252, 252, 254);
     background-image: linear-gradient(90deg, rgb(252, 252, 254) 0%, rgba(83,83,85,1) 100%);
@@ -96,8 +95,6 @@ form{
     margin-top: 100px;
     margin-left: 100px;
 }
-
-
 
 .input{
     font-size: 14px;
@@ -137,13 +134,13 @@ form{
     width: 90%;
 }
 
-.field-button .button{
+.field-button .div-button{
     display: flex;
 }
 
-button{
+.button{
     cursor: pointer;
-    background: linear-gradient(160deg, #939393 30%, transparent 100%) rgba(254,254,254,1);
+    background: linear-gradient(160deg, #939393 30%, transparent 100%) #fefefe;
     color: #090909;
     align-self: end;
     border: none;
@@ -154,14 +151,42 @@ button{
     transition: background-color 1s;
 } 
 
-button:hover, button:focus{
+.button:hover, .button:focus{
     transition: 1s;
     background-color: #939393;
     filter: brightness(1.4);  
 }
 
 #submitbutton{
-    margin-bottom: 25px;
     margin-top: 15px;
     width: 100%;
+}
+
+.buttons{
+    display: flex;
+    gap: 15px;
+}
+
+.mediabuttons{
+    cursor: pointer;
+    width: 100%;
+    background-color:#090909;
+    color: #dedee0;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #212121;
+}
+
+.mediabuttons:last-child{
+    margin-bottom: 30px;
+}
+
+.mediabuttons img{
+    width: 14px;
+}
+
+.mediabuttons:hover{
+    transition: 0.6s;
+    background-color: #212121;
 }
