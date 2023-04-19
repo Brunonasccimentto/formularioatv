@@ -1,42 +1,80 @@
 body{
-    background-color: #ffffff;
-    color: #515151;
+    margin: 0;
+    background-color: #090909;
+    height: 100vh;
+    color: #dedee0;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 h3{
-    color: crimson;
-    padding-left: 18px;
+    margin: 0;
+    padding: 10px;
 }
 
-form {
+form{
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    min-width: 420px;
-    width: 35%;
-    border-radius: 50px;
-    background: #ffffff;
-    box-shadow:   22px 22px 65px #c4c4c4,
-                 -22px -22px 65px #ffffff;
+    align-items: center;
+    flex-direction: column;
+    min-width: 750px;
+    width: 50%;
+    height: 100%;
 }
 
 .fieldset{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 6px;
+    width: 50%;
+    height: 95%;
 }
 
 .field{
     display: flex;
     flex-direction: column;
     margin: auto;
-    position: relative;
     width: 90%;
+}
+
+#select{
+    display: flex;
+    flex-direction: row;
+    color: #dedee0;
+}
+
+#idtipo_cliente{
+    background-color: transparent;
+    color: #dedee0;
+    border: none;
+    padding-left: 10px;
+}
+
+img{
+    border-top-left-radius: 45px;
+    border-bottom-right-radius: 45px;  
+}
+
+
+.div-img{
+    display: flex;
+    justify-content: center;
+    height: 94%;
+    width: 50%;
+}
+
+.input{
+    font-size: 16px;
+    height: 30px;
+    display: block;
+    border: none;
+    background-color: #212121;
+    color: #dedee0;
+    border-radius: 5px;
+    margin-top: 5px;
 }
 
 .field-button{
@@ -50,7 +88,6 @@ form {
     display: flex;
     flex-direction: column;
     margin: auto;
-    position: relative;
 }
 
 .input-button .input{
@@ -59,123 +96,29 @@ form {
 
 .field-button .button{
     display: flex;
-   
 }
-
-.field-button button{
-   width: 100%;
-   justify-content: center;
-}
-
-.input{
-    font-size: 16px;
-    display: block;
-    border: none;
-    border-bottom: 1px solid #515151;
-    background: transparent;
-}
-
-
-.field .label {
-    font-size: 16px;
-    color: #515151;
-    padding-left: 5px;
-    position: absolute;
-    transition: 0.3s;
-    bottom: 10px;
-    pointer-events: none;
-}
-
-.field .input:valid ~ .label,
-.field .input:focus ~ .label  {
-    transition: 0.3s;
-    padding-left: 2px;
-    transform: translateY(-18px);
-    color: crimson;
-    filter: brightness(1.25);
-}
-
-.input:focus{
-    outline: none;
-}
-
-.bar:before, .bar:after {
-    content: '';
-    height: 2px;
-    width: 0;
-    bottom: 0px;
-    position: absolute;
-    background: crimson;
-    transition: 0.5s ease all;
-    filter: brightness(1.25);
-}
-
-.bar:before {
-    left: 50%;
-}
-
-.bar:after {
-    right: 50%;
-}
-
-.input:focus ~ .bar:before, .input:focus ~ .bar:after {
-    width: 50%;
-}
-
 
 button{
-    background-color: crimson;
-    color: #e7e7e7;
-    align-self: center;
+    cursor: pointer;
+    background: linear-gradient(160deg, #939393 20%, transparent 100%) rgba(254,254,254,1);
+    color: #090909;
+    align-self: end;
     border: none;
     border-radius: 50px;
-    width: 40%;
+    width: 100%;
     padding: 10px;
+    transition: background-color 1s;
 } 
 
-button:hover{
-    background-color: rgb(167, 16, 46);
+button:hover, button:focus{
+    transition: 1s;
+   background-color: #939393;
+   filter: brightness(1.3);  
 }
+
 
 #submitbutton{
     margin-top: 25px;
     margin-bottom: 25px;
-    width: 80%;
-}
-
-#select{
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-    color: #515151;
-}
-
-#idtipo_cliente{
-    background-color: transparent;
-    border: none;
-    padding-left: 10px;
-}
-
-@media screen and (max-width: 420px) {
-    h3{
-        font-size: 16px;
-    }
-    h1{
-        font-size: 24px;
-    }
-    form {
-        min-width: 280px;
-        width: 100%;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
-    }
-    .field .label {
-        font-size: 14px;
-    }
-    .input{
-        font-size: 14px;
-    }
-    button{
-        font-size: 12px;
-    } 
+    width: 100%;
 }
