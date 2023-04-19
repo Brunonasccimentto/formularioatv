@@ -5,7 +5,7 @@ body{
     height: 100vh;
     color: #dedee0;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     flex-direction: row;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -24,12 +24,21 @@ form{
     min-width: 750px;
     width: 50%;
     height: 100%;
+    overflow: auto;
+}
+
+::-webkit-scrollbar{
+    width: 1px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: transparent;
 }
 
 .fieldset{
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 10px;
     width: 50%;
     height: 95%;
 }
@@ -56,7 +65,17 @@ form{
 
 .img{
     border-top-left-radius: 45px;
-    border-bottom-right-radius: 45px;  
+    border-bottom-right-radius: 45px;
+    min-height: 750px;
+    height: 94%; 
+}
+
+.div-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 50%;
 }
 
 .div-logo{
@@ -65,25 +84,27 @@ form{
 
 
 .logo{
-    width: 200px;
-    height: 50px;
-    margin-top: 30px;
-    margin-left: 20px;
+    background-color:  rgba(252, 252, 254);
+    background-image: linear-gradient(90deg, rgb(252, 252, 254) 0%, rgba(83,83,85,1) 100%);
+    background-size: 100%;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    margin-top: 100px;
+    margin-left: 100px;
 }
 
-.div-img{
-    display: flex;
-    justify-content: center;
-    height: 94%;
-    width: 50%;
-}
+
 
 .input{
     font-size: 14px;
     height: 25px;
     display: block;
     background-color: #212121 !important;
-    color: #dedee0 !important;
+    color: #545454 !important;
     appearance: none;
     background-image: none !important;
     border-radius: 5px;
@@ -95,7 +116,7 @@ form{
 .input:autofill{
     padding-left: 5px;
     box-shadow: inset 0px 0px 0px 22px #212121 !important;
-    -webkit-text-fill-color: #dedee0;
+    -webkit-text-fill-color: #545454;
     border: 5px solid #212121;
 }
 
@@ -122,25 +143,25 @@ form{
 
 button{
     cursor: pointer;
-    background: linear-gradient(160deg, #939393 20%, transparent 100%) rgba(254,254,254,1);
+    background: linear-gradient(160deg, #939393 30%, transparent 100%) rgba(254,254,254,1);
     color: #090909;
     align-self: end;
     border: none;
-    border-radius: 50px;
+    border-radius: 10px;
     width: 100%;
     padding: 10px;
+    filter: brightness(1.2);
     transition: background-color 1s;
 } 
 
 button:hover, button:focus{
     transition: 1s;
     background-color: #939393;
-    filter: brightness(1.3);  
+    filter: brightness(1.4);  
 }
 
-
 #submitbutton{
-    margin-top: 25px;
     margin-bottom: 25px;
+    margin-top: 15px;
     width: 100%;
 }
