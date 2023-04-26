@@ -1,188 +1,34 @@
-body{
-    margin: 0;
-    background: rgb(21,21,23);
-    background: linear-gradient(169deg, rgba(21,21,23,1) 0%, rgba(9,9,9,1) 100%);
+.bg-blue{
+    background-color: #86EED2;
+}
+
+.body-box{
+    width: 100vw;
     height: 100vh;
-    color: #dedee0;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    flex-direction: row;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-h3{
-    margin: 0;
-    padding: 10px;
+.btn-gradient{
+    background: linear-gradient(169deg, #169c79 41%, transparent 100%)  #20c999;
+    transition: background-color 0.7s;
 }
 
-form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-width: 750px;
-    width: 50%;
-    height: 100%;
-    overflow: auto;
-}
-
-::-webkit-scrollbar{
-    width: 1px;
-}
-
-::-webkit-scrollbar-thumb{
-    background-color: transparent;
-}
-
-.fieldset{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 50%;
-    height: 95%;
-}
-
-.field{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 90%;
-}
-
-#select{
-    display: flex;
-    flex-direction: row;
-    color: #dedee0;
-}
-
-#idtipo_cliente{
-    background-color: transparent;
-    color: #dedee0;
-    border: none;
-    padding-left: 10px;
-}
-
-.img{
-    border-top-left-radius: 45px;
-    border-bottom-right-radius: 45px;
-    min-height: 750px;
-    height: 94%; 
-}
-
-.div-img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 50%;
-}
-
-.logo{
-    background-color:  rgba(252, 252, 254);
-    background-image: linear-gradient(90deg, rgb(252, 252, 254) 0%, rgba(83,83,85,1) 100%);
-    background-size: 100%;
-    background-repeat: repeat;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-    margin-top: 120px;
-    margin-right: 600px;
+.btn-gradient:hover{
+    transition: 0.7s;
+    background-color: #169c79;
+    filter: brightness(1.2);
 }
 
 .input{
-    font-size: 14px;
-    height: 25px;
-    display: block;
-    background-color: #212121 !important;
-    color: #545454 !important;
-    appearance: none;
-    background-image: none !important;
-    border-radius: 5px;
-    margin-top: 5px;
-    padding-left: 5px;
-    border: 5px solid #212121;
+    border: 1px solid #E0E0E0; 
 }
 
-.input:autofill{
-    padding-left: 5px;
-    box-shadow: inset 0px 0px 0px 22px #212121 !important;
-    -webkit-text-fill-color: #545454;
-    border: 5px solid #212121;
+.btn-outline-custom{
+    border: 1px solid #169c79;
 }
 
-.field-button{
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-}
-
-.input-button{
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-}
-
-.input-button .input{
-    width: 90%;
-}
-
-.field-button .div-button{
-    display: flex;
-}
-
-.button{
-    cursor: pointer;
-    background: linear-gradient(160deg, #939393 30%, transparent 100%) #fefefe;
-    color: #090909;
-    align-self: end;
-    border: none;
-    border-radius: 10px;
-    width: 100%;
-    padding: 10px;
-    filter: brightness(1.2);
-    transition: background-color 1s;
-} 
-
-.button:hover, .button:focus{
-    transition: 1s;
-    background-color: #939393;
-    filter: brightness(1.4);  
-}
-
-#submitbutton{
-    margin-top: 15px;
-    width: 100%;
-}
-
-.buttons{
-    display: flex;
-    gap: 15px;
-}
-
-.mediabuttons{
-    cursor: pointer;
-    width: 100%;
-    background-color:#090909;
-    color: #dedee0;
-    border-radius: 10px;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #212121;
-}
-
-.mediabuttons:last-child{
-    margin-bottom: 30px;
-}
-
-.mediabuttons img{
-    width: 14px;
-}
-
-.mediabuttons:hover{
-    transition: 0.6s;
-    background-color: #212121;
+.btn-outline-custom:hover{
+    transition: 1.5s;
+    border: 1px solid #20c999;
+    background: linear-gradient(169deg, #169c79 0%, transparent 100%)  #20c999;
+    color: #fff;
 }
