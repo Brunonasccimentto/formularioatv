@@ -11,18 +11,18 @@
     <title>myform</title>
 </head>
 
-<body class="d-flex justify-content-around bg-blue body-box align-items-center">
+<body class="d-flex flex-column justify-content-around bg-blue body-box align-items-center">
 
-    <div class="d-flex bg-light justify-content-center rounded-5 flex-shrink-0" style="width: 1050px; height: 700px;">
+    <div class="container p-0 d-flex bg-light justify-content-sm-center justify-content-xl-between rounded-5 ">
 
-        <div class="d-flex w-50 justify-content-center rounded-5">
+        <div class=" justify-content-center rounded-5 d-none d-xl-flex w-100">
 
-            <img class="position-absolute" style="margin-right: 300px; margin-top: -100px;" src="images/blue-circle.png" alt="">
-            <img class="position-absolute" style="margin-right: 500px; width: 130px; margin-top: 640px;" src="images/blue-circle.png" alt="">
-            <img class="position-absolute" style="margin-top: -60px; margin-left: 80px;" src="images/yellow-circle.png" alt="">
-            <img class="position-absolute" style="margin-right: 30px; width: 140px;" src="images/yellow-circle.png" alt="">
+            <img class="position-absolute" style="margin-right: 380px; margin-top: -100px;" src="images/blue-circle.png" alt="bola azul">
+            <img class="position-absolute" style="margin-right: 580px; width: 130px; margin-top: 780px;" src="images/blue-circle.png" alt="bola azul">
+            <img class="position-absolute" style="margin-top: -60px; margin-left: 80px;" src="images/yellow-circle.png" alt="bola amarela">
+            <img class="position-absolute" style="margin-right: 0px; width: 140px;" src="images/yellow-circle.png" alt="bola amarela">
 
-            <div class="card p-4 position-absolute align-self-center text-light rounded-4" style="width: 450px; height: 530px; background: rgba(2, 7, 12, 0.4); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(20px); filter: saturate(2);">
+            <div class="card container p-4 position-absolute align-self-center text-light rounded-4 w-25" style=" background: rgba(2, 7, 12, 0.4); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(20px); filter: saturate(3);">
                 <div class="card-body">
                   <h4 class="card-title p-3 fs-5" style="width: 130px; background: rgba(82, 78, 77, 0.4); box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1);"> THEGOOD NETWORK </h4>
                   <span class="card-subtitle">______</span><br><br>
@@ -30,122 +30,134 @@
                   <h6 class="card-subtitle fs-1 fw-light">Invite only right now.</h6>
                   <p class="card-text">10 Million+ peaple have joined our network. <br> We invite you to join the tribe.</p>
 
-                  <p class="card-text fw-medium" style="margin-top: 140px;">Already have an account?</p>
-                  <button class="fw-bold btn text-light p-0">Sign in</button>
+                  <p class="card-text fw-medium" style="margin-top: 240px;">Already have an account?</p>
+                  <button class=" btn text-light p-0">Sign in</button>
                 </div>
             </div>
-            <img class="w-100 rounded-5" src="images/bg.jpg" alt="cartão black">
+            <img class="w-100 d-lg-none d-xl-block rounded-5" src="images/bg.jpg" alt="background">
         </div>
 
-        <form method="POST" enctype="multipart/form-data" class=" d-flex w-50 flex-column align-items-center">
+        <form method="POST" enctype="multipart/form-data" class="mx-xl-4 container-sm d-flex flex-column align-items-center p-4 p-xl-0">
 
-            <div class="p-5 w-75 mt-4">
-                <!-- <img class="logo" src="/images/logo.png" alt=""> -->
+            <div class="p-xl-4 pb-3 pb-xl-0  w-100 mt-4">
                 <h2 class="fs-1">Sign Up</h2>
             </div>
 
-            <div class="overflow-auto p-3 pt-0 w-75 d-flex flex-column gap-2">
+            <div class="p-xl-4 pt-0 w-100 d-flex flex-column gap-1">
 
-                <h5 class="mt-2"> Buscar Cliente </h5>
+                <h5 class="mt-xl-2"> Buscar Cliente </h5>
                 
-                <div class="d-flex gap-1">
-                    <div class="d-flex flex-column w-100 gap-1">
-                        <label for="id" class="">Id</label>
-                        <input id="id" class="p-1 ps-2 input rounded-3" type="text" placeholder="Buscar por Id">
+                <div class="flex-column d-flex flex-md-row gap-2">
+                    <div class="d-flex gap-1 w-100">
+                        <div class="d-flex flex-column w-100 gap-1">
+                            <label for="id" class="">Id</label>
+                            <input id="id" class="p-1 ps-2 input rounded-3" type="text" placeholder="Buscar por Id">
+                        </div>
+    
+                        <div class="align-self-end w-75 d-flex justify-content-end">
+                            <button class="btn btn-gradient text-light btn w-75" type="button" id="buscarId">Buscar</button>
+                        </div>
                     </div>
-
-                    <div class="align-self-end w-75 d-flex justify-content-end fle">
-                        <button class="btn btn-gradient text-light btn w-100" type="button" id="buscarId">Buscar Id</button>
+    
+                    <div class="d-flex gap-1 w-100">
+                        <div class="d-flex flex-column w-100 gap-1">
+                            <label for="email" class="">Email</label>
+                            <input id="buscarEmail" class="p-1 ps-2 input rounded-3" type="text" name="email" placeholder="Buscar por email @">
+                        </div>
+                        <div class="align-self-end w-75 d-flex justify-content-end">
+                            <button class="btn btn-gradient text-light btn w-75" type="button" id="emailButton">Buscar</button>
+                        </div>
                     </div>
                 </div>
+                
 
-                <div class="d-flex gap-1">
+                <h5 class="mt-xl-2"> Dados pessoais </h5>
+                <div class="flex-column d-flex flex-md-row gap-2">
+                    <div class="d-flex flex-column gap-1 w-100">
+                        <label for="nome" class="">Nome completo</label>
+                        <input id="nome" class="p-1 ps-2 input rounded-3" type="text" name="nome" required>
+                    </div>
+
                     <div class="d-flex flex-column w-100 gap-1">
                         <label for="email" class="">Email</label>
-                        <input id="email" class="p-1 ps-2 input rounded-3" type="text" name="email" placeholder="Buscar por email @">
-                    </div>
-                    <div class="align-self-end w-75 d-flex justify-content-end">
-                        <button class="btn btn-gradient text-light btn w-100" type="button" id="buscarEmail">Buscar email</button>
+                        <input id="email" class="p-1 ps-2 input rounded-3" type="text" name="email" required>
                     </div>
                 </div>
-
-                <h5 class="mt-2"> Dados pessoais </h5>
-                <div class="d-flex flex-column gap-1">
-                    <label for="nome" class="">Nome completo</label>
-                    <input id="nome" class="p-1 ps-2 input rounded-3" type="text" name="nome" required>
-                </div>
-
-                <div class="d-flex">
-                    <div class="d-flex flex-column w-100 gap-1">
-                        <label for="email" class="">Email</label>
-                        <input id="email" class="p-1 ps-2 input rounded-3" type="text" name="email" placeholder="Buscar por email @">
+               
+                <div class="flex-column d-flex flex-md-row gap-2">
+                    <div class="d-flex flex-column w-100 gap-1 align-self-end">
+                        <label for="telefone" class="">Telefone</label>
+                        <input id="telefone" class="p-1 ps-2 input rounded-3" type="text" name="telefone" required>
+                    </div>
+    
+                    <div id="select" class="d-flex w-100 flex-column gap-1 align-self-end h-100" >
+                        <label for="idtipo_cliente" class="">Escolha o tipo do cliente:</label>
+                        <select name="idtipo_cliente" class="form-select" id="idtipo_cliente" aria-label="Default select example">
+                            <option value="1" id="tipo1"> 1 </option>
+                            <option value="2" id="tipo2"> 2 </option>
+                            <option value="3" id="tipo3"> 3 </option>
+                        </select>
                     </div>
                 </div>
-
-                <div class="d-flex flex-column gap-1">
-                    <label for="telefone" class="">Telefone</label>
-                    <input id="telefone" class="p-1 ps-2 input rounded-3" type="text" name="telefone" required>
-                </div>
-
-                <div id="select" class="d-flex flex-column gap-1" >
-                    <label for="idtipo_cliente">Escolha o tipo do cliente:</label>
-                    <select name="idtipo_cliente" class="form-select" id="idtipo_cliente" aria-label="Default select example">
-                        <option value="1" id="tipo1"> 1 </option>
-                        <option value="2" id="tipo2"> 2 </option>
-                        <option value="3" id="tipo3"> 3 </option>
-                    </select>
-                </div>
-
-                <h3> Endereço </h3>
-                <div class="d-flex">
-                    <div class="d-flex flex-column w-100 gap-1">
-                        <label for="cep" class="">CEP</label>
-                        <input id="cep" class="p-1 ps-2 input rounded-3" type="text" name="cep" required>
+                <h5 class="mt-xl-2"> Endereço </h5>
+                <div class="flex-column d-flex flex-md-row gap-2">
+                    <div class="d-flex flex-column gap-1 w-100">
+                        <label for="logradouro" class="">Logradouro</label>
+                        <input id="logradouro" class="p-1 ps-2 input rounded-3" type="text" name="logradouro" required>
                     </div>
-                    <div class="align-self-end w-75 d-flex justify-content-end">
-                        <button class="btn btn-gradient text-light btn ms-4 w-100" type="button" id="buscarCep">Buscar CEP</button>
+                    <div class="d-flex w-100">
+                        <div class="d-flex flex-column w-100 gap-1">
+                            <label for="cep" class="">CEP</label>
+                            <input id="cep" class="p-1 ps-2 input rounded-3 " type="text" name="cep" required>
+                        </div>
+                        <div class="align-self-end w-75 d-flex justify-content-end">
+                            <button class="btn btn-gradient text-light btn w-75" type="button" id="buscarCep">Buscar</button>
+                        </div>
                     </div>
                 </div>
-
-                <div class="d-flex flex-column gap-1">
-                    <label for="logradouro" class="">Logradouro</label>
-                    <input id="logradouro" class="p-1 ps-2 input rounded-3" type="text" name="logradouro" required>
-                </div>
-
-                <div class="d-flex flex-column gap-1">
-                    <label for="numero" class="">Número</label>
-                    <input id="numero" class="p-1 ps-2 input rounded-3" type="text" name="numero" required>
-                </div>
-
-                <div class="d-flex flex-column gap-1">
-                    <label for="complemento" class="">Complemento</label>
-                    <input id="complemento" class="p-1 ps-2 input rounded-3" type="text" name="complemento" required>
-                </div>
-
-                <div class="d-flex flex-column gap-1">
-                    <label for="bairro" class="">Bairro</label>
-                    <input id="bairro" class="p-1 ps-2 input rounded-3" type="text" name="bairro" required>
-                </div>
-
-                <div class="d-flex flex-column gap-1">
-                    <label for="cidade" class="">Localidade</label>
-                    <input id="cidade" class="p-1 ps-2 input rounded-3" type="text" name="cidade" required>
-
-                </div>
-
-                <div class="d-flex flex-column gap-1">
-                    <label for="uf" class="">Estado</label>
-                    <input id="uf" class="p-1 ps-2 input rounded-3" type="text" name="uf" required>
-                </div>
-
-                <div class="d-flex flex-column input-group mb-3 gap-4 mt-4">
-                    <button class="btn btn-gradient text-light rounded-3" id="submitbutton" type="submit">Cadastar</button>
-                    <div class="d-flex w-100 justify-content-center gap-3 text-secondary">
-                        <span>_____________</span>
-                        <span class="mt-1"> ou </span>
-                        <span>_____________</span>
+                <div class="flex-column d-flex flex-md-row gap-2">
+                    <div class="d-flex flex-column gap-1 w-100">
+                        <label for="numero" class="">Número</label>
+                        <input id="numero" class="p-1 ps-2 input rounded-3" type="text" name="numero" required>
                     </div>
-                    <button class="btn btn-outline-custom text- rounded-3" type="submit"> <img src="./images/pesquisa.png" class="me-2 h-75 mb-1" alt="google">Cadastrar com Google</button>
+    
+                    <div class="d-flex flex-column gap-1 w-100">
+                        <label for="complemento" class="">Complemento</label>
+                        <input id="complemento" class="p-1 ps-2 input rounded-3" type="text" name="complemento">
+                    </div>
+                </div>
+                
+
+                <div class="flex-column d-flex flex-md-row gap-2">
+                    <div class="d-flex flex-column gap-1">
+                        <label for="bairro" class="">Bairro</label>
+                        <input id="bairro" class="p-1 ps-2 input rounded-3" type="text" name="bairro" required>
+                    </div>
+    
+                    <div class="d-flex flex-column gap-1">
+                        <label for="cidade" class="">Cidade</label>
+                        <input id="cidade" class="p-1 ps-2 input rounded-3" type="text" name="cidade" required>
+    
+                    </div>
+    
+                    <div class="d-flex flex-column gap-1">
+                        <label for="uf" class="">Uf</label>
+                        <input id="uf" class="p-1 ps-2 input rounded-3" type="text" name="uf" required>
+                    </div>
+                </div>
+               
+
+                <div class="d-flex w-100 justify-content-center mt-3">
+                    <div class=" d-flex flex-column w-75 justify-content-center gap-2">
+                        <button class="btn btn-gradient text-light w-100 rounded-3" id="submitbutton" type="submit">Cadastar</button>
+                        <div class="d-flex w-100 justify-content-center gap-3 text-secondary">
+                            <span>_____________</span>
+                            <span class="mt-1"> ou </span>
+                            <span>_____________</span>
+                        </div>
+                        <button class="btn btn-outline-custom rounded-3 mt-1" type="submit"> <img src="./images/pesquisa.png" class="me-2 h-75 mb-1" alt="google">Cadastrar com Google</button>
+                    </div>
+                    
                 </div>
             </div>
 

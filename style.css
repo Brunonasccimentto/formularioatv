@@ -32,3 +32,10 @@
     background: linear-gradient(169deg, #169c79 0%, transparent 100%)  #20c999;
     color: #fff;
 }
+
+@media screen and (max-width: 767px){
+    .body-box{
+        width: 100%;
+        height: 100%;
+    }
+}
